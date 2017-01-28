@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Firebase DB</string>
+    <string name="title_message">Simple message example</string>
 </resources>
