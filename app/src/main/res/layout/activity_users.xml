@@ -6,7 +6,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nickrout.firebasedb.MessageActivity">
+    tools:context="com.nickrout.firebasedb.UsersActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,42 +18,38 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
 
-        <android.support.v7.widget.AppCompatTextView
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:text="Message"
-            tools:ignore="hardCodedText" />
-
-        <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/message"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            style="@style/TextAppearance.AppCompat.Large"
-            tools:text="Hello World!" />
+            app:errorEnabled="true">
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                tools:ignore="hardCodedText" />
+        </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/layout_input"
+            android:id="@+id/layout_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             app:errorEnabled="true">
             <android.support.v7.widget.AppCompatEditText
-                android:id="@+id/input"
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="New message"
+                android:hint="Password"
                 tools:ignore="hardCodedText" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/submit"
+            android:id="@+id/add_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit"
+            android:text="Add user"
             tools:ignore="hardCodedText" />
 
     </LinearLayout>
