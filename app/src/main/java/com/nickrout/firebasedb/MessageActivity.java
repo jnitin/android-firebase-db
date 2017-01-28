@@ -2,6 +2,7 @@ package com.nickrout.firebasedb;
 
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatEditText;
@@ -27,6 +28,7 @@ public class MessageActivity extends AppCompatActivity {
 
     private AppCompatTextView mMessage;
     private AppCompatEditText mInput;
+    private TextInputLayout mInputLayout;
 
     private FirebaseDatabase mFirebaseDatabase;
 
@@ -52,6 +54,7 @@ public class MessageActivity extends AppCompatActivity {
             }
         });
         mInput = (AppCompatEditText) findViewById(R.id.input);
+        mInputLayout = (TextInputLayout) findViewById(R.id.layout_input);
         AppCompatButton submit = (AppCompatButton) findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +67,9 @@ public class MessageActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
                                     if (databaseError != null) {
-                                        Snackbar.make(mMessage, databaseError.getMessage(), Snackbar.LENGTH_SHORT).show();
+                                        mInputLayout.setError(databaseError.getMessage());
+                                    } else {
+                                        mInputLayout.setError(null);
                                     }
                                 }
                             });

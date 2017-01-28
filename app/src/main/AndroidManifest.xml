@@ -20,6 +20,9 @@
         <activity android:name=".MessageActivity"
             android:label="@string/title_message" />
 
+        <activity android:name=".UserActivity"
+            android:label="@string/title_user" />
+
     </application>
 
 </manifest>
