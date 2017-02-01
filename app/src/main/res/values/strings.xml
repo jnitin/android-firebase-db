@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Firebase DB</string>
     <string name="title_message">Simple message example</string>
-    <string name="title_users">Users example</string>
+    <string name="title_users">Presenters example</string>
 </resources>

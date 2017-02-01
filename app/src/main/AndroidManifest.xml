@@ -20,7 +20,7 @@
         <activity android:name=".MessageActivity"
             android:label="@string/title_message" />
 
-        <activity android:name=".UsersActivity"
+        <activity android:name=".PresentersActivity"
             android:label="@string/title_users" />
 
     </application>
